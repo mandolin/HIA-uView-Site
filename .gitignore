@@ -1,0 +1,15 @@
+# Package-manager dependencies / 包管理器依赖
+node_modules/
+
+# Generic static-site output and caches / 通用静态站点产物与缓存
+dist/
+temp/
+.cache/
+
+# Reserved VitePress paths if selected later / 若后续选择 VitePress 的保留路径
+.vitepress/cache/
+.vitepress/dist/
+
+# Local editor and operating-system files / 本地编辑器与操作系统文件
+.DS_Store
+Thumbs.db
