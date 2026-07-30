@@ -8,6 +8,7 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   appearance: false,
+  base: '/HIA-uView-Site/',
   description: 'HIA-uView 官方文档 / Official documentation',
   ignoreDeadLinks: false,
   lang: 'zh-Hans',

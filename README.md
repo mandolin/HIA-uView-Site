@@ -6,9 +6,9 @@ HIA-uView 的官方文档站点。本仓与 UI/Tool npm monorepo 分离，使站
 
 ## Current status / 当前状态
 
-The repository is implementing a local-only VitePress static build with paired public content. Preview, GitHub Pages deployment, and external services remain unconfigured and unauthorized.
+The repository has a local VitePress static build with paired public content. GitHub Pages deployment is governed by ADR-0002 and has not yet been verified as a live site; previews and external services remain out of scope.
 
-本仓正在实现仅限本地构建的 VitePress 静态站与成对公开内容。预览、GitHub Pages 部署和外部服务仍未配置或授权。
+本仓已具备仅限本地构建的 VitePress 静态站与成对公开内容。GitHub Pages 部署由 ADR-0002 约束，尚未验证为线上站点；预览和外部服务仍不在范围内。
 
 ## Content principles / 内容原则
 
@@ -28,9 +28,13 @@ Read [content and source policy](docs/content-and-source-policy.md) before addin
 
 Read [ADR-0001](docs/adr/ADR-0001-local-static-site-and-documentation-gate.md) before changing the generator, dependencies, source-documentation output, or deployment boundary.
 
+Read [ADR-0002](docs/adr/ADR-0002-github-pages-actions-deployment.md) before changing the Pages workflow, action reference, project path, deployment, or rollback boundary.
+
 添加页面或资产前，请阅读[内容与来源政策](docs/content-and-source-policy.md)。
 
 修改生成器、依赖、源码文档输出或部署边界前，请阅读 [ADR-0001](docs/adr/ADR-0001-local-static-site-and-documentation-gate.md)。
+
+修改 Pages workflow、action 引用、项目路径、部署或回退边界前，请阅读 [ADR-0002](docs/adr/ADR-0002-github-pages-actions-deployment.md)。
 
 ## License / 许可证
 
