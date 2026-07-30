@@ -49,3 +49,17 @@ P22 disclosed unresolved audit findings in the VitePress transitive development 
 首次部署必须记录实际 workflow URL、Pages URL、commit、zh-Hans/en 首页与首发路由的 HTTP smoke。GitHub Pages 官方要求 custom workflow 部署 artifact 顶层含 `index.html`，deploy job 具备 `pages: write`/`id-token: write`、`needs` 和 environment；本 ADR 以这些要求作为最小契约。[GitHub Pages custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) 与 [publishing-source documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) 是当前一手来源。
 
 The first deployment must record the actual workflow URL, Pages URL, commit, and HTTP smoke of zh-Hans/en home pages and launch routes. GitHub Pages requires a custom-workflow artifact to contain top-level `index.html`, and the deploy job to have `pages: write`/`id-token: write`, `needs`, and an environment; this ADR treats those requirements as the minimum contract. The [GitHub Pages custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [publishing-source documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) are the current primary sources.
+
+## 首次部署证据 / First-deployment evidence
+
+GitHub Pages 已于 2026-07-30 以 `workflow` build type 启用，HTTPS 默认 URL 为 `https://mandolin.github.io/HIA-uView-Site/`，无 CNAME。首次 Actions run [30514300595](https://github.com/mandolin/HIA-uView-Site/actions/runs/30514300595) 在 commit `786fcd529ec0d41bce2369131fd71d259d3e3e75` 成功：build job 完成 locked install、完整 `npm run check` 和 Pages artifact upload，deploy job 成功部署。
+
+首轮 HTTP smoke 对根、`/en/` 及其余 14 个首发路由全部取得 `200`、HTML title，且未检出 `WorkZone`、AppID、`file://` 或 `sourcesContent` 标记。这是公开静态路由和 artifact 边界证据，不是视觉审阅、设备、无障碍、性能、UI package 或业务功能证据。
+
+GitHub runner 对 `configure-pages` 与该 action 传递使用的 `upload-artifact` 报告其 Node 20 implementation 已被强制运行在 Node 24 的弃用警告；本次运行成功。该警告不阻断当前已固定、官方 action refs 的静态部署，但 action/runner 兼容性须在每次 action 升级、workflow 失败或 GitHub 政策变化时复审。
+
+GitHub Pages was enabled with the `workflow` build type on 2026-07-30 at the HTTPS default URL `https://mandolin.github.io/HIA-uView-Site/`, with no CNAME. Initial Actions run [30514300595](https://github.com/mandolin/HIA-uView-Site/actions/runs/30514300595) succeeded at commit `786fcd529ec0d41bce2369131fd71d259d3e3e75`: the build job completed locked install, full `npm run check`, and Pages artifact upload, then the deploy job succeeded.
+
+Initial HTTP smoke received `200` and an HTML title for root, `/en/`, and the other 14 launch routes, and detected no `WorkZone`, AppID, `file://`, or `sourcesContent` marker. This is public static-route and artifact-boundary evidence, not visual review, device, accessibility, performance, UI-package, or business-function evidence.
+
+The GitHub runner warned that `configure-pages` and the transitive `upload-artifact` used by that action have Node 20 implementations being forced to run on Node 24; this run succeeded. The warning does not block the current static deployment with fixed official action refs, but action/runner compatibility must be reviewed upon every action upgrade, workflow failure, or GitHub policy change.

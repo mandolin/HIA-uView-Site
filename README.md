@@ -6,9 +6,9 @@ HIA-uView 的官方文档站点。本仓与 UI/Tool npm monorepo 分离，使站
 
 ## Current status / 当前状态
 
-The repository has a local VitePress static build with paired public content. GitHub Pages deployment is governed by ADR-0002 and has not yet been verified as a live site; previews and external services remain out of scope.
+The repository has a local VitePress static build with paired public content. Its first GitHub Pages deployment is live at [mandolin.github.io/HIA-uView-Site](https://mandolin.github.io/HIA-uView-Site/), governed by ADR-0002; previews and external services remain out of scope.
 
-本仓已具备仅限本地构建的 VitePress 静态站与成对公开内容。GitHub Pages 部署由 ADR-0002 约束，尚未验证为线上站点；预览和外部服务仍不在范围内。
+本仓已具备仅限本地构建的 VitePress 静态站与成对公开内容。首次 GitHub Pages 部署已上线至 [mandolin.github.io/HIA-uView-Site](https://mandolin.github.io/HIA-uView-Site/)，并受 ADR-0002 约束；预览和外部服务仍不在范围内。
 
 ## Content principles / 内容原则
 
