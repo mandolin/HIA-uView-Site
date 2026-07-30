@@ -6,9 +6,9 @@ HIA-uView 的官方文档站点。本仓与 UI/Tool npm monorepo 分离，使站
 
 ## Current status / 当前状态
 
-The repository currently establishes public content and source boundaries only. The static-site generator, site implementation, preview, and GitHub Pages deployment have not yet been selected or configured.
+The repository is implementing a local-only VitePress static build with paired public content. Preview, GitHub Pages deployment, and external services remain unconfigured and unauthorized.
 
-本仓当前只建立公开内容与来源边界。静态站点生成器、站点实现、预览和 GitHub Pages 部署尚未选择或配置。
+本仓正在实现仅限本地构建的 VitePress 静态站与成对公开内容。预览、GitHub Pages 部署和外部服务仍未配置或授权。
 
 ## Content principles / 内容原则
 
@@ -26,7 +26,11 @@ The repository currently establishes public content and source boundaries only. 
 
 Read [content and source policy](docs/content-and-source-policy.md) before adding pages or assets.
 
+Read [ADR-0001](docs/adr/ADR-0001-local-static-site-and-documentation-gate.md) before changing the generator, dependencies, source-documentation output, or deployment boundary.
+
 添加页面或资产前，请阅读[内容与来源政策](docs/content-and-source-policy.md)。
+
+修改生成器、依赖、源码文档输出或部署边界前，请阅读 [ADR-0001](docs/adr/ADR-0001-local-static-site-and-documentation-gate.md)。
 
 ## License / 许可证
 
