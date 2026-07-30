@@ -10,12 +10,12 @@ No third-party source code, assets, fonts, icons, screenshots, themes, or genera
 | --- | --- | --- | --- |
 | `vitepress@1.6.4` | npm registry package, locked by `package-lock.json` | MIT | Local static build only; no runtime package. |
 | `jsdoc@4.0.5` | npm registry package, locked by `package-lock.json` | Apache-2.0 | Local source-documentation validation only. |
-| `@mandolin/jsdoc-plugin-hia-sys@0.1.3` | Public GitHub commit `f98b34ae5220e4b1aae4d333b4222eb9ef0577d0` | MIT | Local bilingual JSDoc integration gate only. |
-| `@mandolin/jsdoc-theme-hia@0.1.2` | Public GitHub commit `379e433df46d9d7a713c58b577c002dbec3cd4c8` | MIT | Local JSDoc-theme validation only. |
+| `@mandolin/jsdoc-plugin-hia-sys@0.1.2` | Scoped public registry package, lockfile integrity `sha512-FO8…8J2w==` | MIT | Local bilingual JSDoc integration gate only. |
+| `@mandolin/jsdoc-theme-hia@0.1.1` | Scoped public registry package, lockfile integrity `sha512-6wGu…WGQ==` | MIT | Local JSDoc-theme validation only. |
 
-The two `@mandolin` packages are temporarily pinned to public Git commits because their stated versions were not available from an npm registry on 2026-07-30. See [ADR-0001](docs/adr/ADR-0001-local-static-site-and-documentation-gate.md); no local path, private artifact, or generated JSDoc output is distributed.
+The P63 `@mandolin` versions (`0.1.3`/`0.1.2`) were not available from an npm registry on 2026-07-30, so this repository uses the previously published and audited `0.1.2`/`0.1.1` versions through a scope-only public registry and lockfile integrity. See [ADR-0001](docs/adr/ADR-0001-local-static-site-and-documentation-gate.md); no local path, private artifact, or generated JSDoc output is distributed.
 
-两个 `@mandolin` 包在 2026-07-30 尚无对应 npm registry 版本，因此暂时固定到公开 Git 提交。详见 [ADR-0001](docs/adr/ADR-0001-local-static-site-and-documentation-gate.md)；不会分发本机路径、私有制品或生成的 JSDoc 输出。
+P63 所述两个 `@mandolin` 版本（`0.1.3`/`0.1.2`）在 2026-07-30 尚无 npm registry 发布版本，因此本仓通过 scope 专用公开 registry 与 lockfile integrity 使用此前已发布并已审计的 `0.1.2`/`0.1.1`。详见 [ADR-0001](docs/adr/ADR-0001-local-static-site-and-documentation-gate.md)；不会分发本机路径、私有制品或生成的 JSDoc 输出。
 
 Any future inclusion must be reviewed for provenance, version, immutable reference, license, attribution, asset boundary, privacy implications, and distribution scope before it is added.
 

@@ -1,0 +1,30 @@
+{
+  "name": "hia-uview-site",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Official static documentation site for HIA-uView.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "vitepress build site",
+    "check": "npm run content:check && npm run docs:check && npm run build && npm run output:check",
+    "content:check": "node scripts/check-site-content.mjs",
+    "docs:api": "jsdoc -c docs/jsdoc.config.json",
+    "docs:check": "node scripts/check-documentation.mjs && npm run docs:api && node scripts/verify-documentation-output.mjs",
+    "output:check": "node scripts/verify-static-output.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mandolin/HIA-uView-Site.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@mandolin/jsdoc-plugin-hia-sys": "0.1.2",
+    "@mandolin/jsdoc-theme-hia": "0.1.1",
+    "jsdoc": "4.0.5",
+    "vitepress": "1.6.4"
+  }
+}

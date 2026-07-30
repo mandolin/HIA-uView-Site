@@ -9,6 +9,7 @@ temp/
 # Reserved VitePress paths if selected later / 若后续选择 VitePress 的保留路径
 .vitepress/cache/
 .vitepress/dist/
+.vitepress/.temp/
 
 # Local editor and operating-system files / 本地编辑器与操作系统文件
 .DS_Store

@@ -1,0 +1,36 @@
+/**
+ * @lang zh-CN 定义 HIA-uView 官方站的本地浅色主题 token，以钴蓝承担主结构、清透青承担局部强调；不主张暗色主题或无障碍认证。
+ * @lang en Defines local light-theme tokens for the HIA-uView official site: cobalt carries primary structure and clear cyan carries local emphasis; it makes no dark-theme or accessibility-certification claim.
+ */
+
+/**
+ * @lang zh-CN 将项目已记录的颜色角色映射到 VitePress token，避免页面内容或组件 CSS 直接散布原始品牌色。
+ * @lang en Maps documented project color roles to VitePress tokens, avoiding raw brand colors scattered through page content or component CSS.
+ */
+:root {
+  --vp-c-brand-1: #0047ab;
+  --vp-c-brand-2: #003b8f;
+  --vp-c-brand-3: #002f73;
+  --vp-c-brand-soft: rgb(0 71 171 / 14%);
+  --vp-c-text-1: #001b2e;
+  --vp-c-tip-1: #006d8a;
+  --vp-c-tip-2: #00a8d3;
+  --vp-c-tip-3: #d9f6ff;
+  --vp-button-brand-bg: #0047ab;
+  --vp-button-brand-hover-bg: #003b8f;
+  --vp-button-brand-active-bg: #002f73;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #0047ab 30%, #00a8d3);
+}
+
+/**
+ * @lang zh-CN 为首页内容块提供克制的边界和表面层次，保持内容可读性而不引入图片、阴影品牌资产或远程资源。
+ * @lang en Gives home-page content blocks restrained boundaries and surface hierarchy while retaining readability without images, branded shadow assets, or remote resources.
+ */
+.VPFeature {
+  border-color: rgb(0 71 171 / 18%);
+}
+
+.VPFeature:hover {
+  border-color: #00a8d3;
+}
