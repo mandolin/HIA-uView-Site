@@ -10,6 +10,7 @@ temp/
 .vitepress/cache/
 .vitepress/dist/
 .vitepress/.temp/
+site/.vitepress/.temp/
 
 # Local editor and operating-system files / 本地编辑器与操作系统文件
 .DS_Store
